@@ -1,16 +1,9 @@
 """
 
-Set up steps:
-
-	1) Change the credentials in env_user.py
-
-	2) Set up the environment:
-		% python3 -m venv venv
-		% source venv/bin/activate
-		% pip install -r requirements.txt
-
-	3)Run this code:
-		% python3 mx-uplink-tracking.py
+	This code requires completion: 
+		after we change uplink to WAN 2 
+		we need to also monitor the behavior of WAN 2
+		and switch back to WAN 1, etc.
 
 
 """
@@ -69,10 +62,6 @@ def change_default_uplink(network_id):
 if __name__ == '__main__':
 
 	# In production, this should be running in a while loop
-	# This code requires completion: 
-		# after we change uplink to WAN 2 
-		# we need to also monitor the behavior of WAN 2
-		# and switch back to WAN 1, etc.
 
 	loss, latency = get_uplink_loss_and_latency(serial)
 	print('loss of WAN 1: ', loss, '%')
